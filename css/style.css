@@ -51,24 +51,27 @@ body {
 
 /* ---------- Hero ---------- */
 
+/* ---------- Hero ---------- */
+
 .hero {
-  position: relative;
-  overflow: hidden;
-  max-width: 640px;
+  max-width: 720px;
   margin: 0 auto;
-  padding: 64px 32px 32px;
+  padding: 64px 32px 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
 }
 
-.hero__title,
-.hero__tagline {
-  position: relative;
-  z-index: 2;
+.hero__text {
+  flex: 1;
+  min-width: 240px;
 }
 
 .hero__title {
   font-family: var(--font-display);
-  font-size: 2.5rem;
-  line-height: 1.05;
+  font-size: 2.4rem;
+  line-height: 1.08;
   letter-spacing: -0.01em;
   margin-bottom: 14px;
 }
@@ -77,121 +80,44 @@ body {
   font-size: 1rem;
   color: var(--color-muted);
   line-height: 1.6;
-  max-width: 400px;
+  max-width: 380px;
 }
 
-.hero__constellation {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 110px;
-  pointer-events: none;
-}
-
-.hero__constellation .shape {
-  position: absolute;
-}
-
-.shape--circle {
-  top: -2px;
-  right: 44px;
-  width: 52px;
-  height: 52px;
+.hero__portrait {
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
-  background: var(--color-accent-1);
-  animation: floatA 5s ease-in-out infinite;
+  border: 5px solid #ffffff;
+  box-shadow: 0 2px 14px rgba(52, 67, 94, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  background: #EFEAF6;
 }
 
-.shape--ring {
-  top: -14px;
-  left: 60px;
-  width: 34px;
-  height: 34px;
-  border-radius: 50%;
-  border: 3px solid var(--color-accent-light);
-  animation: floatRing 7s ease-in-out infinite;
+.hero__portrait-placeholder {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #7a7398;
 }
 
-.shape--dot {
-  top: -4px;
-  right: 130px;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: var(--color-text);
-  animation: floatDot 4s ease-in-out infinite;
-}
-
-.shape--diamond {
-  top: 38px;
-  left: 190px;
-  width: 16px;
-  height: 16px;
-  background: var(--color-accent-1);
-  opacity: 0.65;
-  transform: rotate(45deg);
-  animation: floatDiamond 6.5s ease-in-out infinite;
-}
-
-.hero__motion {
-  position: relative;
-  height: 76px;
-  margin-top: 8px;
-}
-
-.hero__wave {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 70px;
-  opacity: 0.9;
-  animation: waveMove 6s ease-in-out infinite;
-}
-
-.hero__shape {
-  position: absolute;
-  opacity: 0.92;
-}
-
-.hero__shape--square {
-  bottom: 2px;
-  left: 44px;
-  width: 30px;
-  height: 30px;
-  background: var(--color-accent-2);
-  animation: floatB 6s ease-in-out infinite;
-}
-
-@keyframes waveMove {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-6px); }
-}
-
-@keyframes floatA {
-  0%, 100% { transform: translate(0, 0); }
-  50% { transform: translate(6px, -10px); }
-}
-
-@keyframes floatB {
-  0%, 100% { transform: translate(0, 0) rotate(0deg); }
-  50% { transform: translate(-8px, 8px) rotate(10deg); }
-}
-
-@keyframes floatRing {
-  0%, 100% { transform: translate(0, 0) rotate(0deg); }
-  50% { transform: translate(5px, 6px) rotate(-15deg); }
-}
-
-@keyframes floatDot {
-  0%, 100% { transform: translate(0, 0); }
-  50% { transform: translate(-4px, 7px); }
-}
-
-@keyframes floatDiamond {
-  0%, 100% { transform: translate(0, 0) rotate(45deg); }
-  50% { transform: translate(6px, -5px) rotate(60deg); }
+/* Mobil: stable tekst og bilde */
+@media (max-width: 560px) {
+  .hero {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    gap: 24px;
+    padding-top: 48px;
+  }
+  .hero__portrait {
+    align-self: center;
+    width: 120px;
+    height: 120px;
+  }
+  .hero__title {
+    font-size: 2rem;
+  }
 }
 
 /* ---------- Navigasjonskort ---------- */
