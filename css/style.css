@@ -1,0 +1,42 @@
+:root {
+  --color-bg: #F7F3F3;           /* Snow */
+  --color-text: #34435E;         /* Twilight Indigo */
+  --color-muted: #7a7680;
+  --color-accent-1: #5F1BC4;     /* Ultrasonic Blue */
+  --color-accent-2: #383FBC;     /* Persian Blue */
+  --color-accent-light: #CAC2D6; /* Thistle */
+  --font-display: 'Anton', sans-serif;
+  --font-body: 'Space Grotesk', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+}
+
+.hero {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 64px 32px 32px;
+}
+
+.hero__title {
+  font-family: var(--font-display);
+  font-size: 2.2rem;
+  line-height: 1.15;
+  margin-bottom: 12px;
+}
+
+.hero__tagline {
+  font-size: 1rem;
+  color: var(--color-muted);
+  line-height: 1.6;
+  max-width: 400px;
+}
