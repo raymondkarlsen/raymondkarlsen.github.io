@@ -21,33 +21,7 @@ body {
   font-family: var(--font-body);
 }
 
-/* ---------- Topplist ---------- */
 
-.top-bar {
-  background: var(--color-text);
-  height: 10px;
-  width: 100%;
-  position: relative;
-  overflow: hidden;
-}
-
-.top-bar__dot {
-  position: absolute;
-  top: 2px;
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  animation: dotDrift 4.5s ease-in-out infinite;
-}
-
-.top-bar__dot--a { left: 20%; background: var(--color-accent-light); animation-duration: 4s; }
-.top-bar__dot--b { left: 55%; background: var(--color-accent-1); animation-duration: 5s; animation-delay: 0.6s; }
-.top-bar__dot--c { left: 80%; background: var(--color-accent-2); animation-duration: 4.6s; animation-delay: 1.2s; }
-
-@keyframes dotDrift {
-  0%, 100% { transform: translateX(0); opacity: 0.7; }
-  50% { transform: translateX(10px); opacity: 1; }
-}
 
 /* ---------- Hero ---------- */
 
