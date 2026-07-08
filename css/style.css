@@ -84,33 +84,23 @@ body {
 }
 
 .hero__portrait {
-  position: relative;
-  width: 200px;
-  height: 200px;
   flex-shrink: 0;
+  width: 220px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.hero__portrait-circle {
-  position: relative;
-  z-index: 2;
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  border: 5px solid #ffffff;
-  box-shadow: 0 2px 14px rgba(52, 67, 94, 0.12);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #EFEAF6;
+.hero__illustration {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
-.hero__portrait-placeholder {
-  font-size: 0.8rem;
-  font-weight: 600;
-  color: #7a7398;
+@media (max-width: 560px) {
+  .hero__portrait {
+    width: 180px;
+  }
 }
 
 /* Formklynge rundt bildet */
