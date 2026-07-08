@@ -84,6 +84,18 @@ body {
 }
 
 .hero__portrait {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero__portrait-circle {
+  position: relative;
+  z-index: 2;
   width: 150px;
   height: 150px;
   border-radius: 50%;
@@ -92,7 +104,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-shrink: 0;
   background: #EFEAF6;
 }
 
@@ -100,6 +111,32 @@ body {
   font-size: 0.8rem;
   font-weight: 600;
   color: #7a7398;
+}
+
+/* Formklynge rundt bildet */
+.hero__portrait .shape {
+  position: absolute;
+  z-index: 1;
+}
+
+.shape--1 { top: 4px; right: 10px; width: 30px; height: 30px; border-radius: 50%; background: var(--color-accent-1); animation: floatA 5s ease-in-out infinite; }
+.shape--2 { top: -6px; left: 40px; width: 0; height: 0; border-left: 11px solid transparent; border-right: 11px solid transparent; border-bottom: 18px solid var(--color-accent-2); animation: floatB 6s ease-in-out infinite; }
+.shape--3 { top: 30px; right: -8px; width: 18px; height: 18px; background: var(--color-accent-2); animation: floatC 5.5s ease-in-out infinite; }
+.shape--4 { bottom: 20px; right: 2px; width: 40px; height: 40px; border-radius: 50%; background: var(--color-text); animation: floatB 6.5s ease-in-out infinite; }
+.shape--5 { bottom: 8px; left: 24px; width: 22px; height: 22px; border-radius: 50%; background: var(--color-accent-light); animation: floatA 5.8s ease-in-out infinite 0.4s; }
+.shape--6 { bottom: -4px; right: 46px; width: 16px; height: 16px; background: var(--color-accent-1); animation: floatC 4.8s ease-in-out infinite 0.3s; }
+
+@keyframes floatA {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(4px, -6px); }
+}
+@keyframes floatB {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  50% { transform: translate(-5px, 5px) rotate(10deg); }
+}
+@keyframes floatC {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(5px, 4px); }
 }
 
 /* Mobil: stable tekst og bilde */
