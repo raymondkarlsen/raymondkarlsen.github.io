@@ -57,6 +57,32 @@ body {
   max-width: 390px;
 }
 
+.hero__links {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 22px;
+  margin-top: 20px;
+}
+
+.hero__links a {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 0.85rem;
+  color: #3a3550;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.hero__links a:hover {
+  color: var(--color-accent-2);
+}
+
+.hero__links i {
+  font-size: 18px;
+}
+
 .hero__portrait {
   flex-shrink: 0;
   width: 220px;
