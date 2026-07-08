@@ -21,6 +21,8 @@ body {
   font-family: var(--font-body);
 }
 
+/* ---------- Hero ---------- */
+
 .hero {
   max-width: 640px;
   margin: 0 auto;
@@ -29,9 +31,10 @@ body {
 
 .hero__title {
   font-family: var(--font-display);
-  font-size: 2.2rem;
-  line-height: 1.15;
-  margin-bottom: 12px;
+  font-size: 2.5rem;
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+  margin-bottom: 14px;
 }
 
 .hero__tagline {
@@ -102,13 +105,25 @@ body {
   max-width: 640px;
   margin: 0 auto;
   padding: 0 32px 64px;
+}
+
+.nav-cards__label {
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #9a94a0;
+  margin: 0 0 12px;
+}
+
+.nav-cards__grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 16px;
 }
 
 @media (max-width: 480px) {
-  .nav-cards {
+  .nav-cards__grid {
     grid-template-columns: 1fr;
   }
 }
@@ -165,14 +180,14 @@ body {
 .nav-card__title {
   font-family: var(--font-body);
   font-weight: 600;
-  font-size: 15px;
+  font-size: 17px;
   margin-bottom: 8px;
   color: #2b2b28;
 }
 
 .nav-card__text {
   font-family: var(--font-body);
-  font-size: 12px;
+  font-size: 13.5px;
   color: #5c5748;
   line-height: 1.55;
 }
