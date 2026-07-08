@@ -11,8 +11,20 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <div class="top-bar" aria-hidden="true">
+    <span class="top-bar__dot top-bar__dot--a"></span>
+    <span class="top-bar__dot top-bar__dot--b"></span>
+    <span class="top-bar__dot top-bar__dot--c"></span>
+  </div>
+
   <main>
     <section class="hero">
+      <div class="hero__constellation" aria-hidden="true">
+        <div class="shape shape--circle"></div>
+        <div class="shape shape--ring"></div>
+        <div class="shape shape--dot"></div>
+        <div class="shape shape--diamond"></div>
+      </div>
       <h1 class="hero__title">Hei, jeg heter Raymond</h1>
       <p class="hero__tagline">Jeg driver med innholdsdesign, brukervennlighet, UX, web og sånt. Webfyr. Far.</p>
       <div class="hero__motion" aria-hidden="true">
@@ -26,7 +38,6 @@
           </defs>
           <path d="M0,35 C60,55 120,10 180,35 C240,60 300,15 360,35 C420,55 460,20 480,35" stroke="url(#waveGradient)" stroke-width="3" fill="none" stroke-linecap="round"/>
         </svg>
-        <div class="hero__shape hero__shape--circle"></div>
         <div class="hero__shape hero__shape--square"></div>
       </div>
     </section>

@@ -21,12 +21,48 @@ body {
   font-family: var(--font-body);
 }
 
+/* ---------- Topplist ---------- */
+
+.top-bar {
+  background: var(--color-text);
+  height: 10px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.top-bar__dot {
+  position: absolute;
+  top: 2px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  animation: dotDrift 4.5s ease-in-out infinite;
+}
+
+.top-bar__dot--a { left: 20%; background: var(--color-accent-light); animation-duration: 4s; }
+.top-bar__dot--b { left: 55%; background: var(--color-accent-1); animation-duration: 5s; animation-delay: 0.6s; }
+.top-bar__dot--c { left: 80%; background: var(--color-accent-2); animation-duration: 4.6s; animation-delay: 1.2s; }
+
+@keyframes dotDrift {
+  0%, 100% { transform: translateX(0); opacity: 0.7; }
+  50% { transform: translateX(10px); opacity: 1; }
+}
+
 /* ---------- Hero ---------- */
 
 .hero {
+  position: relative;
+  overflow: hidden;
   max-width: 640px;
   margin: 0 auto;
   padding: 64px 32px 32px;
+}
+
+.hero__title,
+.hero__tagline {
+  position: relative;
+  z-index: 2;
 }
 
 .hero__title {
@@ -42,6 +78,60 @@ body {
   color: var(--color-muted);
   line-height: 1.6;
   max-width: 400px;
+}
+
+.hero__constellation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 110px;
+  pointer-events: none;
+}
+
+.hero__constellation .shape {
+  position: absolute;
+}
+
+.shape--circle {
+  top: -2px;
+  right: 44px;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: var(--color-accent-1);
+  animation: floatA 5s ease-in-out infinite;
+}
+
+.shape--ring {
+  top: -14px;
+  left: 60px;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 3px solid var(--color-accent-light);
+  animation: floatRing 7s ease-in-out infinite;
+}
+
+.shape--dot {
+  top: -4px;
+  right: 130px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--color-text);
+  animation: floatDot 4s ease-in-out infinite;
+}
+
+.shape--diamond {
+  top: 38px;
+  left: 190px;
+  width: 16px;
+  height: 16px;
+  background: var(--color-accent-1);
+  opacity: 0.65;
+  transform: rotate(45deg);
+  animation: floatDiamond 6.5s ease-in-out infinite;
 }
 
 .hero__motion {
@@ -63,16 +153,6 @@ body {
 .hero__shape {
   position: absolute;
   opacity: 0.92;
-}
-
-.hero__shape--circle {
-  top: -2px;
-  right: 44px;
-  width: 52px;
-  height: 52px;
-  border-radius: 50%;
-  background: var(--color-accent-1);
-  animation: floatA 5s ease-in-out infinite;
 }
 
 .hero__shape--square {
@@ -97,6 +177,21 @@ body {
 @keyframes floatB {
   0%, 100% { transform: translate(0, 0) rotate(0deg); }
   50% { transform: translate(-8px, 8px) rotate(10deg); }
+}
+
+@keyframes floatRing {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  50% { transform: translate(5px, 6px) rotate(-15deg); }
+}
+
+@keyframes floatDot {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(-4px, 7px); }
+}
+
+@keyframes floatDiamond {
+  0%, 100% { transform: translate(0, 0) rotate(45deg); }
+  50% { transform: translate(6px, -5px) rotate(60deg); }
 }
 
 /* ---------- Navigasjonskort ---------- */
