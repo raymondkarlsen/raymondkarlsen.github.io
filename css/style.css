@@ -250,3 +250,18 @@ body {
 .shirt--a .shirt__number { font-size: 13px; color: #4FA06B; }
 .shirt--b .shirt__number { font-size: 15px; color: #2F7D4F; }
 .shirt--c .shirt__number { font-size: 13px; color: #2b2b28; }
+
+/* ---------- Topp- og bunnkant ---------- */
+
+.edge {
+  width: 100%;
+  background: var(--color-accent-2); /* Persian Blue */
+}
+
+.edge--top {
+  height: 12px;
+}
+
+.edge--bottom {
+  height: 40px;
+}
